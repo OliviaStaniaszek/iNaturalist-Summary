@@ -586,7 +586,7 @@
 <section>
   <h2>Photo Highlights</h2>
   <div class="gallery">
-    {#each observations.filter(o => o.photos && o.photos.length > 0 && isClassVisible(o)).slice(0, 20) as obs}
+    {#each observations.filter(o => o.photos && o.photos.length > 0 && isClassVisible(o)).slice(0, 100) as obs}
       <a href={obs.uri} target="_blank" class="gallery-item">
         <img src={obs.photos[0].url.replace('square', 'medium')} alt={obs.species_guess} />
         <div class="caption">{obs.species_guess}</div>
