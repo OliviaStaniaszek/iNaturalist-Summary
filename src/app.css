@@ -1,0 +1,339 @@
+/* Background for entire page */
+body {
+  margin: 0;
+  padding: 0.5rem;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  background: #563f36;
+  color: #483732;
+  display: flex;
+  justify-content: center;
+
+}
+
+/* Page wrapper to control max width */
+.page-wrapper {
+  max-width: 420px;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+/* Typography */
+h1 {
+  font-family: 'IM Fell DW Pica SC', serif;
+  font-size: 30px;
+  line-height: 33px;
+  font-weight: 400 !important; /* force correct weight */
+  font-variant: small-caps !important; /* optional - in figma you are using small caps look */
+  text-transform: none !important; /* prevent unwanted upper/lower transformations */
+  color: #483732;
+  text-align: center;
+  margin: .5rem 0 0.5rem;
+}
+
+h2 {
+  font-family: 'IM Fell DW Pica SC', serif;
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 400 !important; /* force correct weight */
+  font-variant: small-caps !important; /* optional - in figma you are using small caps look */
+  color: #483732;
+  text-align: center;
+  margin: .25rem 0 .5rem;
+}
+
+h3 {
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 30px;
+  line-height: 25px;
+  color: #483732;
+  text-align: center;
+  margin: .5rem 0;
+}
+
+p, body, li, small, input, button {
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  color: #483732;
+  margin: 0;
+}
+
+p{
+  margin: 0, .5rem;
+}
+
+/* Section "card" backgrounds */
+section, ul {
+  background: rgba(255, 248, 219, 0.8);
+  padding: .5rem;
+  margin: .5rem 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  box-shadow: 0px 8px 8px rgba(48, 29, 16, 0.3);
+
+
+}
+
+/* Chart wrappers */
+.chart-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chart-wrapper canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* Bar chart bars */
+.chart-wrapper .chart-bar {
+  background-color: #668458 !important;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.25rem;
+}
+
+.gallery-item {
+  display: block; 
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block; 
+  width: 100%;
+  aspect-ratio: 1 / 1; /* forces a square */
+  object-fit: cover;   /* crops the image to fill the square */
+  border-radius: 0;    /* per your previous no-rounded-edges */
+}
+
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0, 0.3); /* #46302B 40% */
+  background: linear-gradient(to top, rgba(70, 48, 43, 0.8), rgba(70, 48, 43, 0));
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  color: #EDDBBD;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  padding-top: 8px;
+  padding-right: 4px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gallery-item p, .gallery-item small {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+}
+
+a{
+  padding: 0;
+}
+
+/* Stats + Highlight layout */
+.stats-highlight-wrapper {
+  display: flex;
+  flex-wrap: nowrap; /* force always side by side */
+  gap: .5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.stats-box, .highlight-box {
+  flex: 1 1 220px;
+  max-width: 220px;
+  padding: 1rem;
+  border-radius: 0;
+  border: none;
+}
+
+.stats-box ol {
+  margin: 0 0 0.5rem 1.2rem;
+  padding: 0;
+}
+
+.highlight-box img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Range buttons */
+.range-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+ 
+}
+
+
+button {
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  padding: 0.4rem 0.8rem;
+  background-color: #CDA988;
+  border: none;
+  color: #483732;
+  cursor: pointer;
+}
+
+.range-buttons button:disabled {
+  background: #E5D4BC;
+  cursor: default;
+}
+
+/* Inputs */
+input[type="text"] {
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  padding: 0.5rem;
+  border: none;
+  width: 250px;
+  background-color: rgba(72, 55, 50,.2);
+  color: #483732;
+}
+
+
+/* Label wrapper */
+.checkbox-wrapper.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px; /* room for box */
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: #483732;
+  user-select: none;
+}
+
+/* Hide native checkbox */
+.checkbox-wrapper input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox box */
+.checkbox-wrapper .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #FFF8DB; /* match your background */
+  border: 2px solid #483732;
+}
+
+/* Hover effect */
+.checkbox-wrapper:hover input ~ .checkmark {
+  background-color: #EAD9BC; /* soft hover */
+}
+
+/* Checked state background */
+.checkbox-wrapper input:checked ~ .checkmark {
+  background-color: #668458;
+}
+
+/* Checkmark indicator (hidden by default) */
+.checkbox-wrapper .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show checkmark when checked */
+.checkbox-wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style of the checkmark */
+.checkbox-wrapper .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #FFF8DB;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* loading */
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(70, 48, 43, 0.6); /* subtle dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-box {
+  background: #FFF8DB;
+  color: #483732;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 24px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .desktop-only {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .stats-box, .highlight-box {
+    flex: 1 1 250px;
+    max-width: 320px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .highlight-box img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 900px) {
+  .page-wrapper {
+    max-width: 600px; /* still portrait-ish, slightly larger if you want */
+    margin: 5rem auto; /* this will center it with large margins */
+    padding: 2rem;
+    box-shadow: 0px 8px 16px rgba(48, 29, 16, 0.3); /* optional subtle box shadow for card look */
+    background: rgba(255, 248, 219, 0.9); /* optional: to reinforce paper look on wider screen */
+  }
+}
